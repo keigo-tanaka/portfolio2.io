@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.header {
+  background: url(../images/moon-2285627_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  margin-bottom: 50px;
+  /* min-height: 600px; */
+}
+
+header .title {
+  color: #fff;
+  line-height: 1.4;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .title h1 {
+  font-size: 113px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+}
+
+header .title p {
+  font-size: 70px;
+  margin-top: 30px;
+  letter-spacing: 0.1em;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+    transform: translateX(800px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.textAnimation span {
+  display: inline-block;
+  animation: showText 3s backwards;
+}
+
+main  {
+  max-width: 1300px;
+  background-color: rgb(205, 243, 240);
+  /* border: solid 2px #333; */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 15px 0;
+  text-align: center;
+}
+
+section .about h2 {
+  padding-top: 50px;
+}
+
+section .name-en {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 15px;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Indie Flower', cursive;
+}
+
+section .name-ja {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 15px;
+}
+
+section img {
+  display:block;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.resume  {
+  background-color: #fff;
+  max-width: 1000px;
+  display: block;
+  margin: 50px auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.resume h2 {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+}
+
+.resume ul {
+  display: inline-block;
+  list-style-type: none;
+  text-align: left;
+}
+
+.resume ul li {
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+}
+
+.resume h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.bis {
+  margin-bottom: 20px;
+}
+
+.bis h3 {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.bis p {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  list-style-type: none;
+  text-align: left;
+}
+.bis b {
+  font-weight: 700;
+}
+
+.resume span {
+  margin-left: 10px;
+}
+
+
+.star5_rating{
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: #CCCCCC; /* グレーカラー 自由に設定化 */
+  /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before, .star5_rating:after{
+  content: '★★★★★';
+}
+
+.star5_rating:after{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffcf32; /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5_rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5_rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5_rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5_rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
+.lang {
+  width: 1000px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 5px;
+
+}
+.skill h3 {
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 10px 0 0;
+}
+
+.star5_rating {
+  font-size: 24px;
+  margin: 0 100px;
+}
+
+.skill p {
+  font-size: 20px;
+  margin: 10px 0;
+
+}
+
+.skill i {
+  font-size: 50px;
+  margin: 0 24px;
+}
+
+.skill .fa-html5 {
+  color: #E44C27;
+}
+
+.skill .fa-css3-alt {
+  color: #146FB1;
+}
+
+.skill .fa-js {
+  color: #F0DB4F;
+
+}
+
+.skill h3 .photosho {
+  display: inline-block;
+  height: 25px;
+}
+
+.skill .photosho img{
+  display: inline-block;
+  margin-left: -5px;
+  width: 68px;
+  height: 68px;
+}
+
+.pr {
+  background-color: #fff;
+  max-width: 1000px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: justify;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.pr a {
+  font-weight: bold;
+  color: #f5df17;
+}
+
+.pr a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  height: 100px;
+  background: #aaa;
+}
